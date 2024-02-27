@@ -1,0 +1,30 @@
+﻿@model EmployeeViewModel
+
+<h2>Update Employee Details</h2>
+
+@using (Html.BeginForm("UpdateEmployee", "Employee", FormMethod.Post))
+{
+    <input type="hidden" asp-for="EmployeeId" />
+
+    <div>
+        <label>First Name:</label>
+        <input type="text" asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+
+    <div>
+        <label>Last Name:</label>
+        <input type="text" asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+
+    <div>
+        <label>Salary:</label>
+        <input type="number" asp-for="Salary" />
+        <span asp-validation-for="Salary"></span>
+    </div>
+
+    <!-- Add more fields as needed -->
+
+    <button type="submit">Submit</button>
+}
